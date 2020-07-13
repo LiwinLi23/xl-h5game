@@ -12,6 +12,7 @@
 	    	<audio id="Slide_sound" src="style/img/learning/sound/roundabout_sound.mp3"></audio>
 	        <audio id="Slide" src="style/img/learning/sound/roundabout.mp3"></audio>
 	        <audio id="endAudio" src="style/img/learning/sound/end.mp3"></audio>
+			<audio id="good" src="style/img/learning/sound/good-xiaoling.mp3"></audio>
 	        <audio id="twinkle" src="style/img/learning/sound/ep1_LT_1.mp3"></audio>
 	    </div>
 	</div>
@@ -27,7 +28,7 @@
   </div>
 </template>
 <style type="text/css" scoped>
-	
+
 </style>
 <script>
 export default{
@@ -55,7 +56,7 @@ export default{
 		gotoNext(e){
 			var that=this,path=$(e.currentTarget).data('path'),type=$(e.currentTarget).data('type');
 			setTimeout(function(){
-				clearInterval(that.setIntervalplay);	
+				clearInterval(that.setIntervalplay);
 			},1600);
 			if(type==='return'){
 				that.learningShow="";
@@ -72,7 +73,8 @@ export default{
 			var that=this;
 			e.addEventListener("ended",function(){
 				that.endOn="End";
-				$('#endAudio')[0].play();
+				// $('#endAudio')[0].play();
+				$('#good')[0].play();
 				clearInterval(that.setIntervalplay);
 				that.qiqiuAnimate();
 				 //that.$router.replace({ path: path})
