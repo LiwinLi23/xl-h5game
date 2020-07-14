@@ -8,6 +8,7 @@ import Swing from '../views/customs1/swing.vue'
 import Roundabout from '../views/customs1/roundabout.vue'
 import Checking from '../views/customs1/checking.vue'
 import Practicing from '../views/customs1/practicing.vue'
+import Writing from '../views/customs1/writing.vue'
 Vue.use(VueRouter)
 const routes = [
   {
@@ -49,6 +50,11 @@ const routes = [
     path:'/practicing',
     name:'practicing',
     component:Practicing
+  },
+  {
+    path:'/writing',
+    name:'writing',
+    component:Writing
   }
 ]
 
